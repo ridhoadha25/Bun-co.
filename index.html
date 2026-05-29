@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Burger Adha - Nikmatnya Sampai Gigitan Terakhir</title>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">Bun & Co.</div>
+        <nav>
+            <a href="#hero">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimoni">Testimoni</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+        <button class="cart-btn" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge-fresh">🔥 Fresh Daily | Since 2026</span>
+                <h1>Sensasi Burger <br><span class="highlight">Premium Artisan</span></h1>
+                <p>Rasakan ledakan rasa dari daging sapi 100% murni yang super <i>juicy</i>, dipadukan dengan keju cheddar meleleh, sayuran organik segar, dan siraman saus rahasia di dalam tangkupan roti panggang lembut.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="cta-btn primary-cta">Pesan Sekarang 🛒</a>
+                    <a href="#tentang" class="cta-btn secondary-cta">Pelajari Menu 📖</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Artisan Burger Premium">
+                    <div class="floating-badge">
+                        <span>100%</span>
+                        <small>Premium Beef</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#tentang">↓ Scroll ke bawah untuk menjelajah</a>
+        </div>
+    </section>
+
+    <section id="tentang">
+        <div class="about-container">
+            <div class="about-images">
+                <img src="https://images.unsplash.com/photo-1586816001966-79b736744398?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dapur Burger Adha" class="img-main">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pembuatan Burger" class="img-sub">
+                <div class="experience-badge">
+                    <h3>6+</h3>
+                    <span>Tahun<br>Pengalaman</span>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <span class="section-subtitle">Kisah Kami</span>
+                <h2 class="section-title-left">Lebih dari Sekadar Burger Biasa</h2>
+                <p class="lead-text">Berawal dari hobi memanggang di garasi rumah pada tahun 2020, Burger Adha kini menjadi destinasi utama bagi para penikmat burger sejati yang mencari kualitas tanpa kompromi.</p>
+                <p class="desc-text">Kami menolak menggunakan bahan instan. Kami bangga menyajikan mahakarya kuliner dengan bahan lokal terbaik, karena kami percaya setiap gigitan harus memberikan kebahagiaan maksimal.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🍔</div>
+                        <div class="feature-info">
+                            <h4>100% Daging Sapi Murni</h4>
+                            <p>Tanpa pengawet, digiling segar setiap harinya.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🥬</div>
+                        <div class="feature-info">
+                            <h4>Sayuran Organik Lokal</h4>
+                            <p>Dipanen langsung dari kebun mitra petani kami.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔥</div>
+                        <div class="feature-info">
+                            <h4>Artisan Brioche Bun</h4>
+                            <p>Roti dipanggang <i>fresh</i> di dapur kami sendiri.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Grid Section (Tampilan Premium) -->
+    <section id="menu">
+        <div class="menu-header">
+            <span class="section-subtitle" style="text-align: center; margin: 0 auto 10px;">Eksplorasi Rasa</span>
+            <h2 class="section-title">Menu Favorit Kami</h2>
+        </div>
+        
+        <div class="menu-grid">
+            
+            <!-- Produk 1 -->
+            <div class="menu-item">
+                <div class="menu-img-wrapper">
+                    <span class="menu-badge badge-popular">Terlaris</span>
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Classic Beef">
+                </div>
+                <div class="menu-content">
+                    <h3>Classic Beef</h3>
+                    <p>Patty sapi murni 100%, selada segar, tomat, keju cheddar, dan saus original.</p>
+                    <div class="menu-action">
+                        <div class="price">Rp 35.000</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Classic Beef', 35000)">🛒 Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="menu-item">
+                <div class="menu-img-wrapper">
+                    <span class="menu-badge badge-premium">Rekomendasi Chef</span>
+                    <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Double Cheese Melt">
+                </div>
+                <div class="menu-content">
+                    <h3>Double Cheese Melt</h3>
+                    <p>Dua tumpuk patty sapi dengan lumeran keju ekstra tebal dan karamel bawang.</p>
+                    <div class="menu-action">
+                        <div class="price">Rp 50.000</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Double Cheese Melt', 50000)">🛒 Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="menu-item">
+                <div class="menu-img-wrapper">
+                    <span class="menu-badge badge-spicy">🔥 Pedas</span>
+                    <img src="https://images.unsplash.com/photo-1610440042657-612c34d95e9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Spicy Chicken">
+                </div>
+                <div class="menu-content">
+                    <h3>Spicy Crispy Chicken</h3>
+                    <p>Fillet ayam krispi pedas dengan saus mayo spesial dan selada renyah.</p>
+                    <div class="menu-action">
+                        <div class="price">Rp 30.000</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('Spicy Crispy Chicken', 30000)">🛒 Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="menu-item">
+                <div class="menu-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="BBQ Beef Ring">
+                </div>
+                <div class="menu-content">
+                    <h3>BBQ Beef Ring</h3>
+                    <p>Patty sapi dengan paduan onion ring krispi, beef bacon, disiram saus BBQ.</p>
+                    <div class="menu-action">
+                        <div class="price">Rp 55.000</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('BBQ Beef Ring', 55000)">🛒 Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimoni Section (Tampilan Premium) -->
+    <section id="testimoni">
+        <div class="testi-header">
+            <span class="section-subtitle" style="color: var(--secondary);">Ulasan Pelanggan</span>
+            <h2 class="section-title" style="color: white;">Apa Kata Mereka?</h2>
+        </div>
+        
+        <div class="testi-grid">
+            <!-- Testimoni 1 -->
+            <div class="testi-card">
+                <div class="quote-icon">❝</div>
+                <div class="stars">★★★★★</div>
+                <p class="testi-text">"Sumpah ini burger terenak yang pernah saya makan di Pekanbaru. Dagingnya tebal, <i>juicy</i>, dan lumer di mulut. Sausnya juga juara banget, beda dari yang lain!"</p>
+                <div class="testi-profile">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Budi Santoso">
+                    <div class="profile-info">
+                        <h4>Budi Santoso</h4>
+                        <span>Food Blogger</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="testi-card">
+                <div class="quote-icon">❝</div>
+                <div class="stars">★★★★★</div>
+                <p class="testi-text">"Sering pesan buat makan siang kantor. Pelayanannya cepat dan rotinya selalu terasa fresh dari oven. Rekomen banget yang Double Cheese Melt, kejunya melimpah!"</p>
+                <div class="testi-profile">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Rina Melati">
+                    <div class="profile-info">
+                        <h4>Rina Melati</h4>
+                        <span>Karyawan Swasta</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="testi-card">
+                <div class="quote-icon">❝</div>
+                <div class="stars">★★★★☆</div>
+                <p class="testi-text">"Porsinya ngenyangin parah. Harga sebanding banget sama kualitas premium yang didapat. Onion ring di dalam BBQ Beef Ring bikin teksturnya makin kaya."</p>
+                <div class="testi-profile">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Andi Wijaya">
+                    <div class="profile-info">
+                        <h4>Andi Wijaya</h4>
+                        <span>Mahasiswa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & Lokasi Section -->
+    <section id="kontak">
+        <h2 class="section-title">Kunjungi & Hubungi Kami</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Restoran</h3>
+                <p>📍 Jl. Sudirman No. 123, Kota Kuliner, Indonesia</p>
+                <p>📞 +62 812 3456 7890</p>
+                <p>✉️ halo@burgeradha.com</p>
+                <br>
+                <h3>Jam Operasional</h3>
+                <p>Senin - Jumat: 10:00 - 22:00 WIB</p>
+                <p>Sabtu - Minggu: 11:00 - 23:30 WIB</p>
+            </div>
+            <div class="contact-form">
+                <h3>Kirim Pesan ke Kami</h3>
+                <form id="msgForm" onsubmit="sendMessage(event)">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Alamat Email" required>
+                    <textarea rows="4" placeholder="Tulis pesan, kritik, atau saran Anda di sini..." required></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar Keranjang Belanja -->
+    <aside id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Keranjang Anda</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Item akan dimuat via JS -->
+        </div>
+        <div class="cart-total">
+            Total: Rp <span id="total-price">0</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Proses Pesanan Sekarang</button>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Burger Adha. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+    <!-- === LOGIKA PROGRAM JAVASCRIPT === -->
+    <script src="script.js"></script>
+</body>
+</html>
