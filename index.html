@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Burger Adha - Nikmatnya Sampai Gigitan Terakhir</title>
+    <title>Bun & Co | website interaktif</title>
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -220,50 +220,133 @@
         </div>
     </section>
 
-    <!-- Kontak & Lokasi Section -->
+    <!-- Kontak & Lokasi Section (Premium) -->
     <section id="kontak">
-        <h2 class="section-title">Kunjungi & Hubungi Kami</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Informasi Restoran</h3>
-                <p>📍 Jl. Sudirman No. 123, Kota Kuliner, Indonesia</p>
-                <p>📞 +62 812 3456 7890</p>
-                <p>✉️ halo@burgeradha.com</p>
-                <br>
-                <h3>Jam Operasional</h3>
-                <p>Senin - Jumat: 10:00 - 22:00 WIB</p>
-                <p>Sabtu - Minggu: 11:00 - 23:30 WIB</p>
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <span class="section-subtitle">Mari Terhubung</span>
+                <h2 class="section-title">Kunjungi & Hubungi Kami</h2>
             </div>
-            <div class="contact-form">
-                <h3>Kirim Pesan ke Kami</h3>
-                <form id="msgForm" onsubmit="sendMessage(event)">
-                    <input type="text" placeholder="Nama Lengkap" required>
-                    <input type="email" placeholder="Alamat Email" required>
-                    <textarea rows="4" placeholder="Tulis pesan, kritik, atau saran Anda di sini..." required></textarea>
-                    <button type="submit">Kirim Pesan</button>
-                </form>
+            
+            <div class="contact-container">
+                <!-- Info Kontak Card -->
+                <div class="contact-info-card">
+                    <h3>Informasi Restoran</h3>
+                    <p class="info-item">
+                        <span class="info-icon">📍</span>
+                        <span>Jl. Sudirman No. 123<br>Pekanbaru, Riau, Indonesia</span>
+                    </p>
+                    <p class="info-item">
+                        <span class="info-icon">📞</span>
+                        <span>+62 812 3456 7890</span>
+                    </p>
+                    <p class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <span>halo@bunandco.com</span>
+                    </p>
+                    
+                    <hr class="contact-divider">
+                    
+                    <h3>Jam Operasional</h3>
+                    <p class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <span>Senin - Jumat: 10:00 - 22:00 WIB<br>Sabtu - Minggu: 11:00 - 23:30 WIB</span>
+                    </p>
+                </div>
+
+                <!-- Form Kontak -->
+                <div class="contact-form-wrapper">
+                    <h3>Kirim Pesan ke Kami</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Punya kritik, saran, atau pesanan dalam jumlah besar? Jangan ragu untuk menulis pesan kepada tim kami.</p>
+                    <form id="msgForm" onsubmit="sendMessage(event)" class="modern-form">
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Nama Lengkap</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Alamat Email</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Tulis pesan Anda di sini...</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Kirim Pesan Sekarang 🚀</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Sidebar Keranjang Belanja -->
+    <!-- Sidebar Keranjang Belanja (Premium UI) -->
     <aside id="cart-sidebar">
         <div class="cart-header">
             <h2>Keranjang Anda</h2>
             <button class="close-cart" onclick="toggleCart()">×</button>
         </div>
+        
         <div class="cart-items" id="cart-items">
             <!-- Item akan dimuat via JS -->
         </div>
-        <div class="cart-total">
-            Total: Rp <span id="total-price">0</span>
+        
+        <div class="cart-footer">
+            <div class="cart-total-wrapper">
+                <span>Total Belanja:</span>
+                <span class="cart-total-price">Rp <span id="total-price">0</span></span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Proses Pembayaran 🛒</button>
         </div>
-        <button class="checkout-btn" onclick="checkout()">Proses Pesanan Sekarang</button>
     </aside>
 
-    <!-- Footer -->
+    <!-- Overlay Latar Belakang Keranjang -->
+    <div id="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- Footer Multi-Kolom Premium -->
     <footer>
-        <p>&copy; 2026 Burger Adha. Dibuat dengan sepenuh hati.</p>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo" style="color: white;">Bun & Co.</div>
+                <p>Menyajikan pengalaman kuliner tak terlupakan melalui burger artisan premium dengan bahan lokal terbaik sejak 2026.</p>
+                <div class="social-links">
+                    <a href="#" title="Instagram">IG</a>
+                    <a href="#" title="TikTok">TK</a>
+                    <a href="#" title="Twitter">TW</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Jelajah</h4>
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#tentang">Kisah Kami</a></li>
+                    <li><a href="#menu">Menu Spesial</a></li>
+                    <li><a href="#testimoni">Ulasan Pelanggan</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-info">
+                <h4>Kunjungi Kami</h4>
+                <p>📍 Jl. Sudirman No. 123<br>Pekanbaru, Riau</p>
+                <p>⏰ Sen - Jum: 10.00 - 22.00<br>⏰ Sab - Min: 11.00 - 23.30</p>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Promo Eksklusif</h4>
+                <p>Dapatkan info menu baru dan diskon khusus di email Anda.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan newsletter Bun & Co.!');">
+                    <input type="email" placeholder="Alamat Email" required>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bun & Co. Dibuat dengan sepenuh hati di Pekanbaru.</p>
+            <div class="footer-legal">
+                <a href="#">Syarat & Ketentuan</a>
+                <a href="#">Kebijakan Privasi</a>
+            </div>
+        </div>
     </footer>
 
     <!-- === LOGIKA PROGRAM JAVASCRIPT === -->
